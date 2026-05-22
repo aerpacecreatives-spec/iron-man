@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   // metadataBase: new URL("http://localhost:3000"),
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
