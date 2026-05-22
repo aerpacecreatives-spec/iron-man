@@ -223,7 +223,7 @@ export function CinematicReveal() {
         </div>
 
         <div className="pointer-events-none absolute right-6 top-28 z-10 flex max-w-[46ch] flex-col items-end gap-5 text-right md:right-12 md:top-32">
-          <EyebrowBadge>TITAN II // FINAL FRAME</EyebrowBadge>
+          <EyebrowBadge>DEV // ZIGNESH</EyebrowBadge>
           <div className="relative self-stretch">
             <h2
               ref={h2InevitableRef}
@@ -232,7 +232,7 @@ export function CinematicReveal() {
             >
               I am
               <br />
-              <span className="text-accent">Inevitable.</span>
+              <span className="text-accent">Developer.</span>
             </h2>
             <h2
               ref={h2IronManRef}
@@ -241,50 +241,19 @@ export function CinematicReveal() {
             >
               And I am
               <br />
-              <span className="text-accent">Iron Man.</span>
+              <span className="text-accent">Zignesh .</span>
             </h2>
           </div>
-          <p className="max-w-[42ch] font-sans text-sm leading-relaxed text-zinc-400 md:text-base">
-            Endgame &mdash; the snap heard across the universe. J.A.R.V.I.S. held the last frame so we could rebuild from it.
-          </p>
+        
         </div>
 
-        <div className="pointer-events-none absolute left-6 top-20 z-10 flex items-center gap-2 md:left-10 md:top-24">
-          <div className="h-px w-8 bg-accent/60" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-zinc-400">
-            Flight Log &mdash; Archived
-          </span>
-        </div>
+       
 
-        <div className="pointer-events-none absolute right-6 top-20 z-10 flex items-center gap-3 md:right-10 md:top-24">
-          <span
-            ref={seqReadoutRef}
-            className="font-mono text-[10px] uppercase tracking-[0.28em] text-accent"
-          >
-            SEQ 001 / {CINE_FRAME_COUNT}
-          </span>
-          <span
-            aria-hidden
-            className="inline-block h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_rgba(212,162,47,0.85)]"
-          />
-        </div>
+        
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10">
-          <div className="mx-6 mb-3 h-px bg-white/10 md:mx-10">
-            <div
-              ref={progressFillRef}
-              className="h-full origin-left bg-accent"
-              style={{ transform: "scaleX(0)", transition: "transform 80ms linear" }}
-            />
-          </div>
-          <div className="mx-6 flex items-center justify-between pb-4 font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-500 md:mx-10">
-            <span>MARK III // ARCHIVE</span>
-            <span>J.A.R.V.I.S. // PLAYBACK</span>
-            <span>Scroll &darr;</span>
-          </div>
-        </div>
+       
 
-        {BEATS.map((b, i) => {
+        {/* {BEATS.map((b, i) => {
           const visible = visibleBeats.has(b.id);
           const position =
             i === 0
@@ -306,20 +275,80 @@ export function CinematicReveal() {
                   {b.label}
                 </span>
                 <blockquote className="mt-3 font-sans text-xl font-medium leading-snug tracking-tight text-foreground">
-                  &ldquo;{b.quote}&rdquo;
+                  &ldquo;<span><img src={b.link} alt={b.quote} className="h-8 w-8" /></span> {b.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-4 flex items-center justify-between">
-                  <span className="font-sans text-sm text-zinc-300">{b.speaker}</span>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-400">
-                    {b.film}
-                  </span>
-                </figcaption>
+                
               </figure>
             </div>
           );
-        })}
+        })} */}
 
-        <div className="pointer-events-none absolute inset-x-0 top-[36%] z-20 flex flex-col gap-3 px-6 md:hidden">
+
+        {/* ALL SKILLS SHOWCASE */}
+{/* CINEMATIC TECH STACK UI */}
+{/* SIMPLE SKILLS SLIDER */}
+{/* CINEMATIC ORBIT SKILLS UI */}
+{/* PREMIUM TECH STACK */}
+{/* PREMIUM RESPONSIVE TECH STACK */}
+{/* RESPONSIVE SKILLS UI (GRID + SWIPE) */}
+{/* RESPONSIVE SKILLS UI */}
+<div className="absolute inset-x-0 bottom-10 z-20 px-4 md:px-10">
+
+  {/* MOBILE AUTO SLIDER */}
+  <div className="md:hidden overflow-hidden">
+    <div className="flex w-max animate-scroll gap-3">
+      {[...BEATS, ...BEATS].map((b, i) => (
+        <div
+          key={i}
+          className="flex min-w-[120px] items-center gap-3 rounded-xl border border-white/10 bg-black/40 px-3 py-2 backdrop-blur-xl"
+        >
+          <img
+            src={b.link}
+            alt={b.quote}
+            className="h-6 w-6 object-contain"
+          />
+
+          <div>
+            <p className="text-[11px] font-medium text-white">
+              {b.quote}
+            </p>
+            <span className="text-[9px] uppercase tracking-[0.2em] text-zinc-500">
+              Skill
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* DESKTOP GRID */}
+  <div className="hidden md:grid mx-auto max-w-6xl grid-cols-4 gap-4 lg:grid-cols-6">
+    {BEATS.map((b) => (
+      <div
+        key={b.id}
+        className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
+      >
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-black/40">
+          <img
+            src={b.link}
+            alt={b.quote}
+            className="h-7 w-7 object-contain transition group-hover:scale-110"
+          />
+        </div>
+
+        <h3 className="mt-4 text-sm font-semibold text-white">
+          {b.quote}
+        </h3>
+
+        <p className="mt-1 text-[10px] uppercase tracking-[0.2em] text-zinc-500">
+          Skill
+        </p>
+      </div>
+    ))}
+  </div>
+
+</div>
+        {/* <div className="pointer-events-none absolute inset-x-0 top-[36%] z-20 flex flex-col gap-3 px-6 md:hidden">
           {BEATS.map((b) => {
             const visible = visibleBeats.has(b.id);
             return (
@@ -333,7 +362,7 @@ export function CinematicReveal() {
                   {b.label}
                 </span>
                 <blockquote className="mt-2 font-sans text-base font-medium leading-snug text-foreground">
-                  &ldquo;{b.quote}&rdquo;
+                  &ldquo;    {b.quote}&rdquo;
                 </blockquote>
                 <figcaption className="mt-3 flex items-center justify-between">
                   <span className="font-sans text-xs text-zinc-300">{b.speaker}</span>
@@ -344,24 +373,9 @@ export function CinematicReveal() {
               </figure>
             );
           })}
-        </div>
+        </div> */}
 
-        <div
-          ref={outroRef}
-          className="pointer-events-none absolute bottom-24 right-6 z-10 flex flex-col items-end gap-4 md:bottom-32 md:right-12"
-          style={{ opacity: 0, transition: "opacity 80ms linear" }}
-        >
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
-            Next &mdash; engage
-          </span>
-          <a
-            href="#systems"
-            className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-5 py-2.5 font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-foreground backdrop-blur-md transition-all duration-200 hover:bg-white/[0.12] active:translate-y-[1px]"
-          >
-            Open diagnostics
-            <span aria-hidden>&darr;</span>
-          </a>
-        </div>
+       
 
         {!loaded && (
           <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-5 bg-background px-6">
